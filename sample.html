@@ -1,0 +1,206 @@
+<html>
+<head>
+<title></title>
+<!-- Load jQuery -->
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6/jquery.min.js"></script>
+<!-- The javascript xontaining the plugin and the code to init the plugin -->
+<script type="text/javascript">
+$(function() {
+  // let's init the plugin, that we called "highlight".
+  // We will highlight the words "hello" and "world", 
+  // and set the input area to a widht and height of 500 and 250 respectively.
+  $("#container").highlight({
+    words:  [
+"山田","William", "Steven", "Ryan", "Johnny", "Andrew", "Timothy", "Antonio", "Lawrence", "Thomas", "Roger", "Edward", "David", "Thomas", "Timothy", "David", "Roy", "Ralph", "Craig", "Randy", "Lawrence", "Juan", "Clarence", "Russell", "Jack", "Harry", "Jeffrey", "Johnny", "Samuel", "Jesse", "Gregory", "Eric", "Johnny", "Randy", "Lawrence", "Steven", "Michael", "David", "William", "Ronald", "Richard", "Matthew", "Sean", "Clarence", "Terry", "William", "Robert", "Jonathan", "Earl", "Patrick", "Bruce", "Juan", "Terry", "Nicholas", "Jeffrey", "Keith", "Scott", "David", "Paul", "Fred", "Lawrence", "Henry", "Jason", "Paul", "Willie", "Wayne", "Frank", "Clarence", "Ronald", "Juan", "Anthony", "Anthony", "Alan", "Arthur", "Joseph", "Kevin", "Jerry", "Henry", "Shawn", "Walter", "Louis", "Michael", "Timothy", "Jonathan", "Wayne", "Ryan", "George", "John", "Eugene", "James", "Christopher", "Mark", "Johnny", "Charles", "Matthew", "Brian", "Carlos", "Victor", "Robert", "Patrick", "Walter", "Howard", "Frank", "Paul", "John", "Dennis", "Mark", "Kenneth", "Scott", "Gerald", "Jerry", "Thomas", "Gary", "Phillip", "Anthony", "Brian", "Steven", "Edward", "Roger", "Gary", "Frank", "Peter", "Phillip", "Phillip", "David", "Shawn", "Keith", "Carl", "Eric", "Peter", "Wayne", "Stephen", "Jesse", "Samuel", "Lawrence", "Ralph", "Ronald", "Timothy", "Howard", "Anthony", "Arthur", "Jeremy", "Brandon", "Jason", "Russell", "James", "John", "Peter", "Paul", "Keith", "Jose", "Steven", "Victor", "George", "Joseph", "Jeffrey", "Juan", "Walter", "Steven", "Phillip", "Jerry", "James", "Jack", "Gary", "Jimmy", "Kevin", "Randy", "Nicholas", "Martin", "Frank", "Philip", "Lawrence", "Johnny", "Billy", "Eugene", "Alan", "Joe", "Brian", "Jason", "Wayne", "Brian", "George", "Eugene", "Arthur", "Carlos", "Larry", "Willie", "Mark", "Clarence", "Roy", "Fred", "Harold", "Clarence", "Benjamin", "Frank", "Henry", "Chris", "Roy", "Albert", "Billy", "Richard", "Joe", "Ronald", "Mark", "Jose", "Earl", "Randy", "Louis", "Raymond", "Earl", "Louis", "Jerry", "Martin", "Lawrence", "Sean", "Bruce", "Clarence", "Shawn", "Eric", "Carl", "Joshua", "Donald", "Larry", "Terry", "Gregory", "Kenneth", "Arthur", "John", "Benjamin", "Matthew", "Stephen", "Jonathan", "Jeremy", "Christopher", "Jerry", "Thomas", "Chris", "Steve", "Jeremy", "Sean", "Jesse", "Douglas", "Frank", "Steven", "Frank", "Lawrence", "Terry", "Bruce", "Steve", "Joshua", "John", "Daniel", "Bobby", "Steven", "Brian", "Earl", "Scott", "Mark", "William", "Bruce", "Philip", "Peter", "Timothy", "Philip", "Shawn", "Douglas", "James", "Kenneth", "Richard", "Roy", "Fred", "Roger", "Sean", "Sean", "Louis", "John", "Jason", "Justin", "Daniel", "Paul", "Steven", "Willie", "Charles", "Harold", "Adam", "William", "Philip", "Keith", "William", "Raymond", "Edward", "Martin", "Chris", "Jonathan", "Chris", "Roger", "Justin", "Harry", "Charles", "George", "Johnny", "Daniel", "Johnny", "Shawn", "Edward", "Jeremy", "Jose", "Shawn", "Gary", "Richard", "Willie", "Shawn", "David", "Justin", "Joseph", "Benjamin", "Craig", "Albert", "Roger", "Ernest", "Gary", "Gerald", "Jack", "Samuel", "Ryan", "Samuel", "Edward", "Joshua", "Philip", "Antonio", "Alan", "Scott", "Christopher", "Ernest", "Carl", "Aaron", "Arthur", "William", "Ryan", "Christopher", "Louis", "Steven", "Andrew", "Harry", "Willie", "Kevin", "Eugene", "James", "Raymond", "Brandon", "Juan", "George", "Clarence", "Gary", "Earl", "Jimmy", "William", "Harry", "Lawrence", "Carl", "Randy", "Earl", "Carlos", "Jack", "Walter", "Jose", "Scott", "Johnny", "Jason", "Larry", "Ernest", "Roger", "Eugene", "Carl", "Dennis", "Sean", "Randy", "Scott", "Larry", "Walter", "Eugene", "Frank", "Henry", "Joshua", "Carl", "Philip", "Gerald", "Andrew", "Billy", "Johnny", "Matthew", "William", "Donald", "Brandon", "Jerry", "Randy", "Kevin", "Eric", "Christopher", "Phillip", "Steve", "Russell", "Anthony", "Eric", "Bruce", "John", "Daniel", "Donald", "Kevin", "Juan", "Daniel", "Michael", "Charles", "Daniel", "Harold", "Harry", "Gary", "Fred", "Wayne", "Steven", "Dennis", "Mark", "Thomas", "David", "Roger", "Jeremy", "Victor", "Aaron", "Joshua", "Fred", "Stephen", "Jeffrey", "Anthony", "Carlos", "David", "Philip", "Juan", "Peter", "James", "Earl", "David", "Jimmy", "Jack", "Jimmy", "Brandon", "Joe", "Bruce", "Harold", "Shawn", "Eugene", "Kenneth", "Peter", "Carl", "Ernest", "Howard", "Steven", "Todd", "Wayne", "Anthony", "Philip", "Donald", "Jimmy", "William", "Thomas", "Joseph", "Shawn", "Martin", "David", "Terry", "Carl", "Henry", "Ralph", "Randy", "Ronald", "Ronald", "Steve", "Harold", "Gary", "Ernest", "Brian", "Kevin", "Brian", "Roy", "Patrick", "Donald", "Frank", "Juan", "Anthony", "Thomas", "Gerald", "Shawn", "Adam", "Steve", "Peter", "Randy", "Joshua", "Shawn", "George", "Carlos", "Alan", "Peter", "Edward", "Victor", "Christopher", "Johnny", "Joseph", "Gregory", "Andrew", "Clarence", "Jonathan", "Richard", "Johnny", "Scott", "Justin", "Steve", "Joe", "Johnny", "Adam", "Patrick", "Martin", "Russell", "John", "Brian", "Kevin", "Matthew", "Bruce", "Phillip", "Jose", "William", "Alan", "Albert", "Randy", "Daniel", "Paul", "Mark", "Eugene", "Benjamin", "Joshua", "Lawrence", "Samuel", "Earl", "Jack", "Juan", "Bruce", "Dennis", "Steve", "Shawn", "Paul", "Ronald", "Patrick", "Roger", "Juan", "Gerald", "Earl", "Willie", "Howard", "Justin", "Keith", "Paul", "Kenneth", "William", "Louis", "Phillip", "Peter", "Eric", "Johnny", "Walter", "Donald", "Carl", "Terry", "Jerry", "Roger", "Walter", "Randy", "Ernest", "Alan", "Gregory", "Paul", "Joe", "Mark", "Jason", "Phillip", "Kevin", "Terry", "Mark", "Douglas", "Nicholas", "Russell", "Albert", "Roger", "Paul", "Jason", "Victor", "Frank", "Victor", "Brian", "Scott", "Richard", "Dennis", "Victor", "Phillip", "Earl", "Justin", "Jack", "Craig", "Carl", "Nicholas", "Alan", "Andrew", "Albert", "Earl", "Shawn", "Ralph", "Keith", "Harold", "Adam", "Larry", "Aaron", "Eugene", "Phillip", "Jesse", "Johnny", "George", "Philip", "Brandon", "Jack", "Gerald", "James", "Keith", "Harry", "Bruce", "Lawrence", "George", "Charles", "Eugene", "Keith", "Aaron", "Roger", "Thomas", "Peter", "Scott", "Patrick", "Edward", "Henry", "Martin", "Bruce", "Alan", "Kevin", "Carlos", "Gerald", "Eric", "Raymond", "Jesse", "Joe", "Samuel", "Philip", "Edward", "Frank", "Christopher", "Dennis", "Wayne", "George", "Paul", "Chris", "Donald", "Harold", "Fred", "Robert", "Roy", "Terry", "Benjamin", "Stephen", "Antonio", "David", "Ralph", "Jason", "Joshua", "Fred", "Jimmy", "Adam", "Alan", "Gary", "Henry", "Terry", "Juan", "Earl", "Nicholas", "Joseph", "Ryan", "Charles", "Gary", "Ronald", "Patrick", "Eric", "Larry", "Todd", "Nicholas", "Jack", "Ronald", "Edward", "Keith", "Jason", "Albert", "Phillip", "Thomas", "Steve", "David", "Clarence", "Lawrence", "Joe", "Larry", "Nicholas", "Juan", "Mark", "David", "Joe", "Charles", "Jeffrey", "Joe", "Jason", "Eric", "George", "Clarence", "Kevin", "Steve", "Ernest", "Albert", "Daniel", "Joseph", "Clarence", "Brian", "Donald", "Roy", "Johnny", "Adam", "Donald", "Craig", "Jack", "William", "Jesse", "Chris", "Jerry", "Fred", "Ernest", "Jerry", "Samuel", "William", "Brian", "Larry", "Johnny", "Antonio", "Gerald", "Frank", "Frank", "Jose", "Timothy", "Adam", "Terry", "Bobby", "Matthew", "Joshua", "Jeffrey", "Frank", "Eric", "Peter", "Henry", "Larry", "Phillip", "Dennis", "Fred", "Harry", "Patrick", "Scott", "Arthur", "Joe", "Juan", "Andrew", "Raymond", "Ernest", "Wayne", "Kenneth", "Clarence", "Mark", "Ralph", "Alan", "Billy", "Chris", "Patrick", "Harry", "Andrew", "William", "Roger", "Eric", "Lawrence", "Jesse", "Todd", "Chris", "Christopher", "Terry", "Harold", "Daniel", "Brandon", "Jimmy", "Frank", "Eric", "Nicholas", "Peter", "Russell", "Steven", "Matthew", "Alan", "Chris", "Scott", "Paul", "Earl", "Earl", "Shawn", "George", "Victor", "Ryan", "Bruce", "Bruce", "Willie", "Antonio", "Harry", "Nicholas", "Andrew", "Clarence", "Arthur", "Nicholas", "Douglas", "John", "Jeremy", "Patrick", "Stephen", "Roger", "Jack", "Steve", "Brian", "Jose", "Scott", "Douglas", "William", "Jerry", "Steve", "Bobby", "Larry", "Jack", "Victor", "Bruce", "Terry", "Anthony", "Jason", "Steve", "Anthony", "Aaron", "Kenneth", "Patrick", "Andrew", "Michael", "Frank", "Gregory", "Antonio", "Andrew", "Patrick", "Timothy", "George", "Willie", "Nicholas", "Stephen", "Victor", "Anthony", "Clarence", "Kevin", "Louis", "George", "Ronald", "Carl", "Todd", "Gerald", "Russell", "Jeffrey", "Joshua", "George", "Antonio", "Steven", "Juan", "Harry", "Douglas", "Alan", "Clarence", "Matthew", "Scott", "Frank", "Ernest", "Juan", "Peter", "Russell", "Timothy", "Clarence", "James", "Harold", "Chris", "Terry", "Eric", "Patrick", "William", "Richard", "Walter", "Aaron", "Earl", "Johnny", "Joseph", "Willie", "Ronald", "Larry", "Larry", "Peter", "Roy", "Jack", "Donald", "Chris", "Walter", "Billy", "Alan", "Scott", "Charles", "Jimmy", "Fred", "Lawrence", "Donald", "Johnny", "Matthew", "Jack", "Timothy", "Harry", "David", "Gregory", "Ryan", "Jose", "Sean", "David", "Larry", "Raymond", "Adam", "Alan", "Joshua", "Alan", "Gerald", "Gregory", "Keith", "Shawn", "Arthur", "Thomas", "Joshua", "Howard", "Donald", "Charles", "Howard", "Russell", "Daniel", "Terry", "Justin", "Gary", "Philip", "Patrick", "Willie", "Carl", "Eugene", "Russell", "Bruce", "Gerald", "Billy", "Jesse", "Andrew", "Carl", "George", "Mark", "Michael", "Brandon", "Albert", "Ryan", "Kenneth", "Michael", "Earl", "Arthur", "Terry", "Edward", "Jerry", "Jose", "Willie", "Kevin", "Jerry", "Patrick", "Randy", "George", "Paul", "Michael", "Jason", "Matthew", "Jerry","高橋"
+],
+    width:  500,
+    height: 250
+  });
+});
+
+// the plugin that would do the trick
+(function($){
+  $.fn.extend({
+    highlight: function() {
+      var COLOR = '#FA1111';
+      // the main class
+      var pluginClass = function() {};
+      // init the class
+      // Bootloader
+      pluginClass.prototype.__init = function (element) {
+        try {
+          this.element = element;
+        } catch (err) {
+          this.error(err);
+        }
+      };
+      // centralized error handler
+      pluginClass.prototype.error = function (e) {
+        // manage error and exceptions here
+        //console.info("error!",e);
+      };
+      // Centralized routing function
+      pluginClass.prototype.execute = function (fn, options) {
+        try {
+          options = $.extend({},options);
+          if (typeof(this[fn]) == "function") {
+            var output = this[fn].apply(this, [options]);
+          } else {
+            this.error("undefined_function");
+          }
+        } catch (err) {
+          this.error(err);
+        }
+      };
+      // **********************
+      // Plugin Class starts here
+      // **********************
+      // init the component
+      pluginClass.prototype.init = function (options) {
+        try {
+          // the element's reference ( $("#container") ) is stored into "this.element"
+          var scope                   = this;
+          this.options                = options;
+
+          // just find the different elements we'll need
+          this.highlighterContainer   = this.element.find('#highlighterContainer');
+          this.inputContainer         = this.element.find('#inputContainer');
+          this.textarea               = this.inputContainer.find('textarea');
+          this.highlighter            = this.highlighterContainer.find('#highlighter');
+
+          // apply the css
+          this.element.css('position','relative');
+
+          // place both the highlight container and the textarea container
+          // on the same coordonate to superpose them.
+          this.highlighterContainer.css({
+              'position':         'absolute',
+              'left':             '0',
+              'top':              '0',
+              'border':           '1px dashed #ff0000',
+              'width':            this.options.width,
+              'height':           this.options.height,
+              'cursor':           'text'
+              });
+          this.inputContainer.css({
+              'position':         'absolute',
+              'left':             '0',
+              'top':              '0',
+              'border':           '1px solid #000000'
+              });
+          // now let's make sure the highlit div and the textarea will superpose,
+          // by applying the same font size and stuffs.
+          // the highlighter must have a white text so it will be invisible
+          this.highlighter.css({
+
+              'padding':          '7px',
+              'color':            '#eeeeee',
+              'background-color': '#ffffff',
+              'margin':           '0px',
+              'font-size':        '11px',
+              'font-family':      '"lucida grande",tahoma,verdana,arial,sans-serif'
+              });
+          // the textarea must have a transparent background so we can see the highlight div behind it
+          this.textarea.css({
+              'background-color': 'transparent',
+              'padding':          '5px',
+              'margin':           '0px',
+              'font-size':        '11px',
+              'width':            this.options.width,
+              'height':           this.options.height,
+              'font-family':      '"lucida grande",tahoma,verdana,arial,sans-serif'
+              });
+
+          // apply the hooks
+          this.highlighterContainer.bind('click', function() {
+              scope.textarea.focus();
+              });
+          this.textarea.bind('keyup', function() {
+            // when we type in the textarea, 
+            // we want the text to be processed and re-injected into the div behind it.
+            scope.applyText($(this).val());
+          });
+
+          var text = this.textarea.val();
+          scope.applyText(text);
+
+        } catch (err) {
+          this.error(err);
+        }
+        return true;
+      };
+      pluginClass.prototype.applyText = function (text) {
+        try {
+          var scope                   = this;
+
+          // parse the text:
+          // replace all the line braks by <br/>, and all the double spaces by the html version &nbsp;
+          text = this.replaceAll(text,'\n','<br/>');
+          text = this.replaceAll(text,'  ','&nbsp;&nbsp;');
+
+          // replace the words by a highlighted version of the words
+          for (var i=0;i<this.options.words.length;i++) {
+            text = this.replaceAll(text,this.options.words[i],'<span style="background-color: '+COLOR+';">'+this.options.words[i]+'</span>');
+          }
+
+          // re-inject the processed text into the div
+          this.highlighter.html(text);
+
+        } catch (err) {
+          this.error(err);
+        }
+        return true;
+      };
+      // "replace all" function
+      pluginClass.prototype.replaceAll = function(txt, replace, with_this) {
+        return txt.replace(new RegExp(replace, 'g'),with_this);
+      }
+
+      // don't worry about this part, it's just the required code for the plugin to hadle the methods and stuffs. Not relevant here.
+      //**********************
+      // process
+      var fn;
+      var options;
+      if (arguments.length == 0) {
+        fn = "init";
+        options = {};
+      } else if (arguments.length == 1 && typeof(arguments[0]) == 'object') {
+        fn = "init";
+        options = $.extend({},arguments[0]);
+      } else {
+        fn = arguments[0];
+        options = $.extend({},arguments[1]);
+      }
+
+      $.each(this, function(idx, item) {
+        // if the component is not yet existing, create it.
+        if ($(item).data('highlightPlugin') == null) {
+          $(item).data('highlightPlugin', new pluginClass());
+          $(item).data('highlightPlugin').__init($(item));
+        }
+        $(item).data('highlightPlugin').execute(fn, options);
+      });
+      return this;
+    }
+  });
+
+})(jQuery);
+
+
+</script>
+</head>
+<body>
+
+<div id="container">
+  <div id="highlighterContainer">
+    <div id="highlighter">
+
+    </div>
+  </div>
+  <div id="inputContainer">
+    <textarea cols="30" rows="10"></textarea>
+  </div>
+</div>
+
+</body>
+</html>
